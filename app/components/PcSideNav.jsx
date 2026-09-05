@@ -7,7 +7,7 @@ import { useIsMobile } from '../hooks/useIsMobile';
 
 const TABS = [
   { id: 'home', label: '首页', Icon: Home },
-  { id: 'market', label: '行情', Icon: TrendingUp }
+  { id: 'mine', label: '我的', Icon: User }
 ];
 
 export default function PcSideNav({ value, onChange }) {
