@@ -4625,15 +4625,6 @@ export default function HomePage() {
             </div>
             <div className={`actions ${isSearchFocused || selectedFunds.length > 0 ? 'search-focused-sibling' : ''}`}>
               <UpdateChecker onModalOpenChange={setIsUpdateModalOpen} />
-              <span className="github-icon-wrap">
-                <Image
-                  unoptimized
-                  alt="项目Github地址"
-                  src={githubImg}
-                  style={{ width: '30px', height: '30px', cursor: 'pointer' }}
-                  onClick={() => window.open('https://github.com/hzm0321/real-time-fund')}
-                />
-              </span>
               {isMobile && (
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -4690,7 +4681,7 @@ export default function HomePage() {
                   if (isMobile) {
                     setTutorialDrawerOpen(true);
                   } else {
-                    window.open('https://www.yuque.com/u267605/ookgim/im06q8tembbld6im?singleDoc', '_blank');
+                    window.open('https://he521.pp.ua', '_blank');
                   }
                 }}
                 onUpdateLog={() => setUpdateLogOpen(true)}
@@ -5304,76 +5295,6 @@ export default function HomePage() {
                       gap: 8
                     }}
                   >
-                    <p style={{ margin: 0 }}>
-                      遇到任何问题或需求建议可
-                      <button
-                        className="link-button"
-                        onClick={() => {
-                          if (!user?.id) {
-                            sonnerToast.error('请先登录后再提交反馈');
-                            return;
-                          }
-                          setFeedbackNonce((n) => n + 1);
-                          setFeedbackOpen(true);
-                        }}
-                        style={{
-                          background: 'none',
-                          border: 'none',
-                          color: 'var(--primary)',
-                          cursor: 'pointer',
-                          padding: '0 4px',
-                          textDecoration: 'underline',
-                          fontSize: 'inherit',
-                          fontWeight: 600
-                        }}
-                      >
-                        点此提交反馈
-                      </button>
-                      ，或
-                      <button
-                        className="link-button"
-                        onClick={() => _ms({ weChatOpen: true })}
-                        style={{
-                          background: 'none',
-                          border: 'none',
-                          color: 'var(--primary)',
-                          cursor: 'pointer',
-                          padding: '0 4px',
-                          textDecoration: 'underline',
-                          fontSize: 'inherit',
-                          fontWeight: 600
-                        }}
-                      >
-                        加入微信用户支持群
-                      </button>
-                    </p>
-                    <button
-                      onClick={() => setDonateOpen(true)}
-                      style={{
-                        background: 'transparent',
-                        border: 'none',
-                        color: 'var(--muted)',
-                        fontSize: '12px',
-                        cursor: 'pointer',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: 4,
-                        padding: '4px 8px',
-                        borderRadius: '6px',
-                        transition: 'all 0.2s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = 'var(--primary)';
-                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--muted)';
-                        e.currentTarget.style.background = 'transparent';
-                      }}
-                    >
-                      <span>☕</span>
-                      <span>点此请作者喝杯咖啡</span>
-                    </button>
                   </div>
                 </>
               )}
@@ -5402,7 +5323,7 @@ export default function HomePage() {
             if (isMobile) {
               setTutorialDrawerOpen(true);
             } else {
-              window.open('https://www.yuque.com/u267605/ookgim/im06q8tembbld6im?singleDoc', '_blank');
+              window.open('https://he521.pp.ua', '_blank');
             }
           }}
           onUpdateLog={() => setUpdateLogOpen(true)}
