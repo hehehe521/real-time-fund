@@ -4698,7 +4698,9 @@ export default function HomePage() {
           <div style={{ display: mainTab === 'home' ? 'contents' : 'none' }}>
             <div className="grid">
               <div className="col-12">
-                
+                <div
+                  
+                >
                   <div className="tabs-container">
                     <div
                       className="tabs-scroll-wrapper"
