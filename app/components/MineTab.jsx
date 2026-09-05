@@ -66,23 +66,7 @@ export default function MineTab({
             )}
           </div>
         </div>
-        <a
-          className="ocr-quota-badge"
-          style={{
-            position: 'absolute',
-            bottom: 12,
-            right: 12,
-            cursor: 'pointer',
-            textDecoration: 'none',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 4
-          }}
-          onClick={onOpenWeChat}
-        >
-          <QrCode size={14} />
-          加入微信用户支持群
-        </a>
+        
       </section>
 
       <ul className="mine-menu-list" role="list">
@@ -92,30 +76,7 @@ export default function MineTab({
             <ChevronRight className="mine-menu-chevron" aria-hidden strokeWidth={2} />
           </button>
         </li>
-        <li>
-          <button type="button" className="mine-menu-row glass" onClick={onTutorial}>
-            <span className="mine-menu-label">使用帮助</span>
-            <ChevronRight className="mine-menu-chevron" aria-hidden strokeWidth={2} />
-          </button>
-        </li>
-        <li>
-          <button type="button" className="mine-menu-row glass" onClick={onUpdateLog}>
-            <span className="mine-menu-label">更新日志</span>
-            <ChevronRight className="mine-menu-chevron" aria-hidden strokeWidth={2} />
-          </button>
-        </li>
-        <li>
-          <button type="button" className="mine-menu-row glass" onClick={onFeedback}>
-            <span className="mine-menu-label">问题反馈</span>
-            <ChevronRight className="mine-menu-chevron" aria-hidden strokeWidth={2} />
-          </button>
-        </li>
-        <li>
-          <button type="button" className="mine-menu-row glass" onClick={onSponsorSupport}>
-            <span className="mine-menu-label">赞助支持</span>
-            <ChevronRight className="mine-menu-chevron" aria-hidden strokeWidth={2} />
-          </button>
-        </li>
+        
       </ul>
     </div>
   );
