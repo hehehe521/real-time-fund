@@ -5,11 +5,7 @@ import { createPortal } from 'react-dom';
 import { motion, LayoutGroup, useReducedMotion, AnimatePresence } from 'framer-motion';
 import { Home, User, TrendingUp } from 'lucide-react';
 
-const TABS = [
-  { id: 'home', label: '首页', Icon: Home },
-  { id: 'market', label: '行情', Icon: TrendingUp },
-  { id: 'mine', label: '我的', Icon: User }
-];
+
 
 export default function MobileBottomNav({ value, onChange, hidden }) {
   const [mounted, setMounted] = useState(false);
