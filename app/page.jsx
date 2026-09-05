@@ -4580,7 +4580,7 @@ export default function HomePage() {
                   <p>{isSyncing ? '正在同步到云端...' : undefined}</p>
                 </TooltipContent>
               </Tooltip>
-              <span>基估宝</span>
+              <span>呵呵估值</span>
             </div>
             <div
               className={`glass add-fund-section navbar-add-fund ${isSearchFocused || selectedFunds.length > 0 ? 'search-focused' : ''}`}
@@ -4698,20 +4698,7 @@ export default function HomePage() {
           <div style={{ display: mainTab === 'home' ? 'contents' : 'none' }}>
             <div className="grid">
               <div className="col-12">
-                <div
-                  ref={filterBarRef}
-                  className="filter-bar"
-                  style={{
-                    top: `calc(${navbarHeight}px + var(--market-index-height, 0px))`,
-                    marginTop: !shouldShowMarketIndex ? navbarHeight : 0,
-                    marginBottom: 8,
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    gap: 12
-                  }}
-                >
+                
                   <div className="tabs-container">
                     <div
                       className="tabs-scroll-wrapper"
