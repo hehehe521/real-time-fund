@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import PcSideNav from './PcSideNav';
 import MobileBottomNav from './MobileBottomNav';
+// 注意：已删除 import PcSideNav
 
 export default function NavLayout({
   children,
@@ -19,7 +19,9 @@ export default function NavLayout({
 }) {
   return (
     <>
-       <AnimatePresence>
+      {/* 已移除 <PcSideNav /> */}
+      <div ref={containerRef} className={containerClassName} style={{ width: isMobile ? '100%' : containerWidth }}>
+        <AnimatePresence>
           {showThemeTransition && (
             <motion.div
               className="theme-transition-overlay"
@@ -41,7 +43,11 @@ export default function NavLayout({
         {children}
 
         {isMobile && (
-          <MobileBottomNav value={mainTab} onChange={setMainTab} hidden={mobileBottomNavHidden && mainTab === 'home'} />
+          <MobileBottomNav
+            value={mainTab}
+            onChange={setMainTab}
+            hidden={mobileBottomNavHidden && mainTab === 'home'}
+          />
         )}
       </div>
     </>
