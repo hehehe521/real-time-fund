@@ -4699,7 +4699,18 @@ export default function HomePage() {
             <div className="grid">
               <div className="col-12">
                 <div
-                  
+                  ref={filterBarRef}
+                  className="filter-bar"
+                  style={{
+                    top: `calc(${navbarHeight}px + var(--market-index-height, 0px))`,
+                    marginTop: !shouldShowMarketIndex ? navbarHeight : 0,
+                    marginBottom: 8,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: 12
+                  }}
                 >
                   <div className="tabs-container">
                     <div
@@ -4713,42 +4724,7 @@ export default function HomePage() {
                         transition: 'padding 0.2s ease'
                       }}
                     >
-                      <AnimatePresence>
-                        {!showGroupDropdown && !isMobile && hasTabOverflow && (
-                          <>
-                            <motion.button
-                              initial={{ opacity: 0, scale: 0.8, y: '-50%', x: 0 }}
-                              animate={{ opacity: 1, scale: 1, y: '-50%', x: 0 }}
-                              exit={{ opacity: 0, scale: 0.8, y: '-50%', x: 0 }}
-                              whileHover={canLeft ? { scale: 1.1, y: '-50%', x: 0 } : {}}
-                              whileTap={canLeft ? { scale: 0.95, y: '-50%', x: 0 } : {}}
-                              transition={{ duration: 0.15 }}
-                              className={`tabs-scroll-btn left ${!canLeft ? 'opacity-30 cursor-not-allowed' : ''}`}
-                              disabled={!canLeft}
-                              title="单击向左滚动，双击滚动到最左端"
-                              onClick={scrollTabsLeftBtn}
-                              onDoubleClick={scrollTabsToLeftEnd}
-                            >
-                              <ChevronLeft size={16} />
-                            </motion.button>
-                            <motion.button
-                              initial={{ opacity: 0, scale: 0.8, y: '-50%', x: 0 }}
-                              animate={{ opacity: 1, scale: 1, y: '-50%', x: 0 }}
-                              exit={{ opacity: 0, scale: 0.8, y: '-50%', x: 0 }}
-                              whileHover={canRight ? { scale: 1.1, y: '-50%', x: 0 } : {}}
-                              whileTap={canRight ? { scale: 0.95, y: '-50%', x: 0 } : {}}
-                              transition={{ duration: 0.15 }}
-                              className={`tabs-scroll-btn right ${!canRight ? 'opacity-30 cursor-not-allowed' : ''}`}
-                              disabled={!canRight}
-                              title="单击向右滚动，双击滚动到最右端"
-                              onClick={scrollTabsRightBtn}
-                              onDoubleClick={scrollTabsToRightEnd}
-                            >
-                              <ChevronRight size={16} />
-                            </motion.button>
-                          </>
-                        )}
-                      </AnimatePresence>
+                      
                       <div
                         className="tabs-scroll-area"
                         ref={scrollAreaRef}
