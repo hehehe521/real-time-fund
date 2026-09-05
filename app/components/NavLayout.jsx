@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import PcSideNav from './PcSideNav';
 import MobileBottomNav from './MobileBottomNav';
 
 export default function NavLayout({
@@ -18,9 +19,7 @@ export default function NavLayout({
 }) {
   return (
     <>
-      <PcSideNav value={mainTab} onChange={setMainTab} />
-      <div ref={containerRef} className={containerClassName} style={{ width: isMobile ? '100%' : containerWidth }}>
-        <AnimatePresence>
+       <AnimatePresence>
           {showThemeTransition && (
             <motion.div
               className="theme-transition-overlay"
