@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, LayoutGroup, useReducedMotion } from 'framer-motion';
-import { Home, TrendingUp, ChevronRight } from 'lucide-react';
+import { Home, User, TrendingUp, ChevronRight } from 'lucide-react';
 import { useIsMobile } from '../hooks/useIsMobile';
 
 const TABS = [
