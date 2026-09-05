@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { motion, LayoutGroup, useReducedMotion } from 'framer-motion';
-import { Home, User, TrendingUp, ChevronRight } from 'lucide-react';
+import { Home, TrendingUp, ChevronRight } from 'lucide-react';
 import { useIsMobile } from '../hooks/useIsMobile';
 
 const TABS = [
-  { id: 'home', label: '首页', Icon: Home },
-  { id: 'mine', label: '我的', Icon: User }
+  { id: 'home', label: '首页', Icon: Home }
 ];
 
 export default function PcSideNav({ value, onChange }) {
