@@ -11,7 +11,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import packageJson from '../package.json';
 
 export const metadata = {
-  title: `基估宝 V${packageJson.version}`,
+  title: `呵呵估值`,
   description: '输入基金编号添加基金，实时显示估值与前10重仓'
 };
 
