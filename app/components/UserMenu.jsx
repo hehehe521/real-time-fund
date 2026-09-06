@@ -115,11 +115,7 @@ export default function UserMenu({
                     <div className="user-info">
                       <span className="user-email">{user.email}</span>
                       <span className="user-status">已登录</span>
-                      {lastSyncTime && (
-                        <span className="muted" style={{ fontSize: '10px', marginTop: 2 }}>
-                          同步于 {dayjs(lastSyncTime).format('MM-DD HH:mm')}
-                        </span>
-                      )}
+                      
                     </div>
                   </div>
                   <div className="user-menu-divider" />
@@ -184,9 +180,7 @@ export default function UserMenu({
                         <span>{isSyncing ? '同步中...' : '同步'}</span>
                       </button>
                     </TooltipTrigger>
-                    <TooltipContent>
-                      <p>手动同步配置到云端</p>
-                    </TooltipContent>
+                    
                   </Tooltip>
                   <button
                     className="user-menu-item"
